@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-// let txtAdress = ;
-// console.log(' ', txtAdress, '\n ', );
+const { stdout } = process;
+
 fs.readFile(
   path.join(path.join(__dirname, "text.txt")),
   "utf-8",
   (err, data) => {
     if (err) throw err;
-    console.log(data);
+    stdout.write(data);
   },
 );
