@@ -42,4 +42,7 @@ function finishTheProgramm(text) {
 createNewFile();
 stdout.write('Input text: ');
 stdin.on("data", (data) => addNewText(data));
-process.on('SIGINT', () => console.log('Mission complited.'));
+process.on('SIGINT', () => {
+  console.log('Mission complited.');
+  process.exit();
+});
